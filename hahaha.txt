@@ -1,0 +1,17 @@
+CREATE DATABASE chatroom;
+USE chatroom;
+
+CREATE TABLE accs(
+	id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name varchar(30) NOT NULL,
+    username varchar(30) NOT NULL,
+    password varchar(30) NOT NULL,
+    timestamp timestamp DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE chats(
+	id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    account_id int(11) NOT NULL,
+    messages varchar(69) NOT NULL,
+    timestamp timestamp DEFAULT CURRENT_TIMESTAMP
+);
